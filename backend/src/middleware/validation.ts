@@ -13,7 +13,7 @@ const handleValidationErrors: RequestHandler = (req, res, next) => {
 
 export const validateMyUserRequest = [
   body('name').isString().notEmpty().withMessage('Name is required'),
-  body('adressLine1').isString().notEmpty().withMessage('Address is required'),
+  body('addressLine1').isString().notEmpty().withMessage('Address is required'),
   body('city').isString().notEmpty().withMessage('City is required'),
   body('country').isString().notEmpty().withMessage('Country is required'),
   handleValidationErrors,
